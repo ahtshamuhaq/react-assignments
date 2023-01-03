@@ -3,12 +3,18 @@ import { useState } from "react";
 
 export default function FORMATTER() {
   const [value, setValue] = useState([]);
-  const getNumberString = (str) =>
-    [...str]
-      .filter((input) => {
-        Number.isInteger(+input) && input !== "";
-      })
-      .join("");
+  const getNumberString = (str) =>{
+    console.log(typeof str);
+      
+    // [...str]
+    //   .filter((input) => {
+    //     Number.isInteger(+input) && input !== "";
+    //   })
+    //   .join("");
+    return null;
+  }
+      
+     
 
   const formatString = (str) => {
     const numStr = getNumberString(str);
@@ -18,6 +24,7 @@ export default function FORMATTER() {
   };
   const onChangeHandle = (event) => {
     const formateNumber = event.target.value;
+    console.log(formateNumber);
     setValue(formatString(formateNumber));
   };
   return (
@@ -32,8 +39,9 @@ export default function FORMATTER() {
           id="input"
           style={{ width: "250px" }}
           onChange={onChangeHandle}
-          value={value}
+        
           placeholder={"Mobile Number"}
+          
         />
       </div>
       <div className="d-flex justify-content-center my-2">
@@ -42,4 +50,4 @@ export default function FORMATTER() {
       <div style={{ height: "250px" }}></div>
     </div>
   );
-}
+  }

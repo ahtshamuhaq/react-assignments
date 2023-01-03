@@ -21,7 +21,7 @@ export default function Counter() {
       
 }
   return (
-    <div>
+    <div className='vh-100'>
 <nav className="navbar bg-body-tertiary container ">
   <form className="container-fluid justify-content-between align-items-center ">
    <a href="/">Home</a>
@@ -44,7 +44,7 @@ export default function Counter() {
     
 </div>
 <div className="container ">
-    <button className="btn mx-2 btn-primary" onClick={zero}>Reset</button>
+    <button className="btn mx-2 btn v-primary" onClick={zero}>Reset</button>
 </div>
     </div>
   )
